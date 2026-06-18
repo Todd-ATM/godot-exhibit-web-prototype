@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfxoouymk57en"]
+
+[ext_resource type="PackedScene" uid="uid://b7fgsmdy7wq37" path="res://Models/Banners/Creation_of_KCS.glb" id="1_plyao"]
+[ext_resource type="Texture2D" uid="uid://d15xgj4f2l7gr" path="res://Texture/Panels_Banners_Conversions/Banner_Placeholder.png" id="2_akbut"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxoxf"]
+albedo_texture = ExtResource("2_akbut")
+
+[node name="Banner_Template" instance=ExtResource("1_plyao")]
+
+[node name="Creation_Of_KCSC_Banner" parent="." index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_rxoxf")
+
+[node name="CameraPosition" type="Marker3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3180459, 1.2953758)

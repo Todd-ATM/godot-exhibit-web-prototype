@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bv4dmtv1mrews"]
+
+[ext_resource type="Script" uid="uid://clw7ms7xw5361" path="res://Scripts/Camera/Camera_Lerp_Panels-Banners.gd" id="1_pjgee"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hthhi"]
+size = Vector3(2.147522, 0.9633789, 1)
+
+[node name="CameraLerp" type="Area3D"]
+script = ExtResource("1_pjgee")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_hthhi")
+
+[node name="Camera_Target" type="Marker3D" parent="."]

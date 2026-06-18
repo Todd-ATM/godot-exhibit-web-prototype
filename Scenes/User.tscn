@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1oairifvjcd"]
+
+[ext_resource type="Script" uid="uid://btn413pl2j7qj" path="res://Scripts/Movement/First_Person_Controller.gd" id="1_vpl6j"]
+[ext_resource type="AudioStream" uid="uid://ogajnux5fklj" path="res://Audio/Footstep_01.mp3" id="2_qkgay"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_upi61"]
+
+[node name="User" type="CharacterBody3D" groups=["Player"]]
+script = ExtResource("1_vpl6j")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0031633, 0)
+shape = SubResource("CapsuleShape3D_upi61")
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6182956, -0.32638836)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06739926, 0)
+stream = ExtResource("2_qkgay")

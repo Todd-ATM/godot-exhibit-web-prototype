@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=3 uid="uid://c86flo7qj6f50"]
+
+[ext_resource type="PackedScene" uid="uid://dg4mfvnavhuuc" path="res://Scenes/Room.tscn" id="2_idj7w"]
+[ext_resource type="Texture2D" uid="uid://d15xgj4f2l7gr" path="res://Texture/Panels_Banners_Conversions/Banner_Placeholder.png" id="2_kln2b"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_idj7w"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kln2b"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_idj7w")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rgh2o"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pbw6q"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_rgh2o")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgh2o"]
+albedo_texture = ExtResource("2_kln2b")
+
+[node name="Main" type="Node3D"]
+
+[node name="Room" parent="." instance=ExtResource("2_idj7w")]
+
+[node name="Ipad_Kiosk_01" parent="Room/Station_01/IpadKiosk/Model/Ipad_Kiosk_Masaakii" index="0"]
+surface_material_override/6 = SubResource("StandardMaterial3D_kln2b")
+
+[node name="MeshInstance3D" parent="Room/Station_01/IpadKiosk" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pbw6q")
+
+[node name="Ipad_Kiosk_01" parent="Room/Station_01/IpadKiosk2/Model/Ipad_Kiosk_Masaakii" index="0"]
+surface_material_override/6 = SubResource("StandardMaterial3D_kln2b")
+
+[node name="MeshInstance3D" parent="Room/Station_01/IpadKiosk2" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_pbw6q")
+
+[node name="Creation_Of_KCSC_Banner" parent="Room/Station_03/Creation_of_KCS" index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_rgh2o")
+
+[editable path="Room"]
+[editable path="Room/JR"]
+[editable path="Room/Station_01/Cultural_Foundations"]
+[editable path="Room/Station_01/Kainaiysinni"]
+[editable path="Room/Station_01/Miohpokooiksi"]
+[editable path="Room/Station_01/First_man_Woman"]
+[editable path="Room/Station_01/IpadKiosk"]
+[editable path="Room/Station_01/IpadKiosk/Model/Ipad_Kiosk_Masaakii"]
+[editable path="Room/Station_01/IpadKiosk/Cameralerp"]
+[editable path="Room/Station_01/IpadKiosk2"]
+[editable path="Room/Station_01/IpadKiosk2/Model/Ipad_Kiosk_Masaakii"]
+[editable path="Room/Station_01/IpadKiosk2/Cameralerp"]
+[editable path="Room/Station_02/Rights_Of_The_Childs"]
+[editable path="Room/Station_02/Inherent_Rights"]
+[editable path="Room/Station_02/Nitsitapii_Children"]
+[editable path="Room/Station_02/Kipitaipookaiksi"]
+[editable path="Room/Station_03/Disruption"]
+[editable path="Room/Station_03/Kainaiysinni_Parenting"]
+[editable path="Room/Station_03/Creation_of_KCS"]
+[editable path="Room/Station_03/Goals_And_Objectives"]
+[editable path="Room/Station_03/Programs_Provided"]

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ddwqiu5jt0jpn"]
+
+[node name="ExhibitWalkthroughLocations" type="Node3D"]
+
+[node name="Markers" type="Node3D" parent="."]
+
+[node name="Banner_01" type="Marker3D" parent="Markers"]
+
+[node name="Banner_02" type="Marker3D" parent="Markers"]
+
+[node name="Banner_03" type="Marker3D" parent="Markers"]
+
+[node name="Banner_04" type="Marker3D" parent="Markers"]
+
+[node name="Banner_05" type="Marker3D" parent="Markers"]
+
+[node name="Banner_06" type="Marker3D" parent="Markers"]
+
+[node name="Banner_07" type="Marker3D" parent="Markers"]
+
+[node name="Banner_08" type="Marker3D" parent="Markers"]
+
+[node name="Banner_09" type="Marker3D" parent="Markers"]
+
+[node name="Banner_10" type="Marker3D" parent="Markers"]
+
+[node name="Banner_11" type="Marker3D" parent="Markers"]
+
+[node name="Banner_12" type="Marker3D" parent="Markers"]
+
+[node name="Banner_13" type="Marker3D" parent="Markers"]

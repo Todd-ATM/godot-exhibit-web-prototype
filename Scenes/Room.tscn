@@ -1,0 +1,396 @@
+[gd_scene load_steps=30 format=3 uid="uid://dg4mfvnavhuuc"]
+
+[ext_resource type="PackedScene" uid="uid://bjres8j8wldyd" path="res://Models/Room/Room.glb" id="1_5hpqs"]
+[ext_resource type="PackedScene" uid="uid://dmive5u063kph" path="res://Scenes/Ipad_Kiosk.tscn" id="4_a2si3"]
+[ext_resource type="Texture2D" uid="uid://d15xgj4f2l7gr" path="res://Texture/Panels_Banners_Conversions/Banner_Placeholder.png" id="4_si31g"]
+[ext_resource type="PackedScene" uid="uid://cfxoouymk57en" path="res://Scenes/banner_template.tscn" id="10_khqja"]
+[ext_resource type="PackedScene" uid="uid://b7fgsmdy7wq37" path="res://Models/Banners/Creation_of_KCS.glb" id="14_f1ah8"]
+[ext_resource type="PackedScene" uid="uid://23u4yjk8q4qs" path="res://Models/People/JR.glb" id="16_b7nhj"]
+[ext_resource type="Texture2D" uid="uid://c04jpiosla7la" path="res://Texture/Graphics/Footstep_Decal.png" id="20_nkjqd"]
+[ext_resource type="PackedScene" uid="uid://d1oairifvjcd" path="res://Scenes/User.tscn" id="21_6dp4w"]
+
+[sub_resource type="Environment" id="Environment_a2si3"]
+background_mode = 1
+background_color = Color(0.5489626, 0.5489626, 0.54896253, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.577835, 0.44197354, 0.28489918, 1)
+ambient_light_energy = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_03uge"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vofke"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dgula"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gfwtb"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_a2si3"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aaq88"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_a2si3")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7gm67"]
+size = Vector3(0.90185547, 1, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_xebr5"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_si31g"]
+resource_local_to_scene = true
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_xebr5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mimag"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nkjqd"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6dp4w"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyver"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1ah8"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_meqs4"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5amg4"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsvln"]
+albedo_texture = ExtResource("4_si31g")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nn86p"]
+size = Vector3(13.474243, 0.08151245, 14.921599)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5hpqs"]
+size = Vector3(0.026275635, 3.0829124, 15.0615835)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uj218"]
+size = Vector3(0.026275635, 3.0829124, 13.517563)
+
+[node name="Room" instance=ExtResource("1_5hpqs")]
+
+[node name="Room" parent="." index="0"]
+transform = Transform3D(1.5, 0, 0, 0, 1.3, 0, 0, 0, 2.5, 0, 0, 0)
+
+[node name="Lighting" type="Node3D" parent="." index="1"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lighting" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.190418, 0)
+light_energy = 0.3
+omni_range = 14.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
+environment = SubResource("Environment_a2si3")
+
+[node name="JR" parent="." index="3" instance=ExtResource("16_b7nhj")]
+transform = Transform3D(-0.7, 0, -6.119594e-08, 0, 0.7, 0, 6.119594e-08, 0, -0.7, -4.9988832, 0.018096562, 5.4264126)
+
+[node name="Skeleton3D" parent="JR/Armature" index="0"]
+bones/1/position = Vector3(0.1278866, 0.17994261, -0.32126707)
+bones/1/rotation = Quaternion(-0.56103075, -2.9616772e-17, 2.9616765e-17, 0.827795)
+bones/2/rotation = Quaternion(0.9540981, -1.748295e-24, -2.716236e-24, -0.2994943)
+bones/3/rotation = Quaternion(-0.28657725, 2.1192058e-24, 2.2948962e-25, 0.95805717)
+bones/4/position = Vector3(0.12406654, 0.72850114, 0.3844587)
+bones/4/rotation = Quaternion(-3.0908623e-08, 0.7071068, 0.7071068, -3.0908623e-08)
+bones/5/position = Vector3(-0.10332097, 0.14353415, 0.31879142)
+bones/5/rotation = Quaternion(-0.82240045, 0.0026393088, -0.020464486, 0.5685349)
+bones/6/rotation = Quaternion(0.9540981, -3.137915e-10, 9.996446e-10, -0.2994943)
+bones/7/rotation = Quaternion(-0.28657737, -8.2553636e-10, 4.89961e-10, 0.9580571)
+bones/8/position = Vector3(-0.10408234, 0.72850114, 0.3844587)
+bones/8/rotation = Quaternion(-3.0908623e-08, 0.7071068, 0.7071068, -3.0908623e-08)
+bones/9/position = Vector3(0.3402437, 1.2348881, 0.19985479)
+bones/10/rotation = Quaternion(0.5517169, 0.529367, -0.4677213, -0.44341385)
+bones/11/position = Vector3(0.3196207, 1.5566472, 0.17873995)
+bones/12/position = Vector3(-0.2996365, 1.5566472, 0.17873995)
+bones/13/position = Vector3(-0.010139101, 1.4802353, 1.5190073e-09)
+bones/13/rotation = Quaternion(0.99999624, 0.0019394238, 0.0019394238, -3.8570697e-06)
+bones/14/rotation = Quaternion(0.99997133, 0.001953096, 0.0019256356, -0.0070710666)
+bones/15/rotation = Quaternion(-0.011857625, 1.3507761e-08, -2.218335e-10, 0.9999298)
+bones/17/rotation = Quaternion(0.011465624, -1.563461e-16, -5.352971e-18, 0.99993426)
+bones/18/rotation = Quaternion(0.9810051, 0.04281848, -0.09608071, 0.1629855)
+bones/19/rotation = Quaternion(-0.0021031583, -0.052406356, 0.0015431023, 0.9986225)
+bones/20/rotation = Quaternion(0.9779374, -0.10543162, 0.07072258, -0.16589451)
+bones/21/rotation = Quaternion(-0.26117268, 0.049580965, -0.1916143, 0.9447828)
+bones/22/position = Vector3(-0.27980796, -0.5209662, -0.14800641)
+bones/22/rotation = Quaternion(-0.47336775, 0.4962334, 0.5026638, 0.5263122)
+bones/23/rotation = Quaternion(0.55171686, -0.5293669, 0.46772137, -0.44341388)
+bones/24/rotation = Quaternion(0.007744208, 0.99996936, 0.00069763145, 0.0009175695)
+bones/25/rotation = Quaternion(0.012740111, 0.9719727, -0.23474735, 0.00065032585)
+bones/26/rotation = Quaternion(-0.002176756, 0.98901254, -0.14779961, -0.0021800871)
+bones/27/rotation = Quaternion(-0.0001459953, 0.99999624, -0.0026901476, -0.0006690752)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+volume_db = -3.87
+autoplay = true
+
+[node name="Station_01" type="Node3D" parent="." index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50298333, 0, -4.4993954)
+
+[node name="Cultural_Foundations" parent="Station_01" index="0" instance=ExtResource("10_khqja")]
+transform = Transform3D(0.40194783, 0, -0.9156626, 0, 1, 0, 0.9156626, 0, 0.40194783, -3.284, 0, -0.8670001)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_01/Cultural_Foundations" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.308, 1.612, 0.185)
+surface_material_override/1 = SubResource("StandardMaterial3D_03uge")
+
+[node name="CameraPosition" parent="Station_01/Cultural_Foundations" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2866807, 1.3180459, 1.2824919)
+
+[node name="Kainaiysinni" parent="Station_01" index="1" instance=ExtResource("10_khqja")]
+transform = Transform3D(-0.73028153, 0, -0.6831463, 0, 1, 0, 0.6831463, 0, -0.73028153, -3.3360045, 0, 1.6618617)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_01/Kainaiysinni" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1090965, 1.6122646, -0.44171286)
+surface_material_override/1 = SubResource("StandardMaterial3D_vofke")
+
+[node name="CameraPosition" parent="Station_01/Kainaiysinni" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1263312, 1.3180459, 0.5376835)
+
+[node name="Miohpokooiksi" parent="Station_01" index="2" instance=ExtResource("10_khqja")]
+transform = Transform3D(0.77861565, 0, -0.62750113, 0, 1, 0, 0.62750113, 0, 0.77861565, -0.21332693, 0, -1.2004251)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_01/Miohpokooiksi" index="0"]
+transform = Transform3D(0.97309047, 0, -0.23042345, 0, 1, 0, 0.23042345, 0, 0.97309047, -0.44777524, 1.6122646, 0.35862565)
+surface_material_override/1 = SubResource("StandardMaterial3D_dgula")
+
+[node name="CameraPosition" parent="Station_01/Miohpokooiksi" index="1"]
+transform = Transform3D(0.981985, 0, -0.18895838, 0, 1, 0, 0.18895838, 0, 0.981985, -0.61337614, 1.3180459, 1.4361565)
+
+[node name="First_man_Woman" parent="Station_01" index="3" instance=ExtResource("10_khqja")]
+transform = Transform3D(0.5661905, 0, -0.8242744, 0, 1, 0, 0.8242744, 0, 0.5661905, 1.0734241, 0, -1.1969447)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_01/First_man_Woman" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2358048, 1.6122646, -0.34329033)
+surface_material_override/1 = SubResource("StandardMaterial3D_gfwtb")
+
+[node name="CameraPosition" parent="Station_01/First_man_Woman" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23755383, 1.3180459, 0.71183634)
+
+[node name="IpadKiosk" parent="Station_01" index="4" node_paths=PackedStringArray("player", "background_audio") instance=ExtResource("4_a2si3")]
+transform = Transform3D(-0.72107124, 0, -0.69286096, 0, 1, 0, 0.69286096, 0, -0.72107124, 0.63968, 0, 1.301405)
+player = NodePath("../../User")
+background_audio = NodePath("../../AudioStreamPlayer")
+
+[node name="Ipad_Kiosk_01" parent="Station_01/IpadKiosk/Model/Ipad_Kiosk_Masaakii" index="0"]
+surface_material_override/6 = SubResource("StandardMaterial3D_aaq88")
+
+[node name="CollisionShape3D" parent="Station_01/IpadKiosk/Cameralerp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049072266, 0, 0)
+shape = SubResource("BoxShape3D_7gm67")
+
+[node name="MeshInstance3D" parent="Station_01/IpadKiosk" index="3"]
+surface_material_override/0 = SubResource("StandardMaterial3D_si31g")
+
+[node name="IpadKiosk2" parent="Station_01" index="5" node_paths=PackedStringArray("player") instance=ExtResource("4_a2si3")]
+transform = Transform3D(0.266145, 0, -0.96393305, 0, 1, 0, 0.96393305, 0, 0.266145, 4.202533, 0, -0.373868)
+player = NodePath("../../User")
+
+[node name="Ipad_Kiosk_01" parent="Station_01/IpadKiosk2/Model/Ipad_Kiosk_Masaakii" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0076580048, 0, 0)
+surface_material_override/6 = SubResource("StandardMaterial3D_aaq88")
+
+[node name="CollisionShape3D" parent="Station_01/IpadKiosk2/Cameralerp" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049072266, 0, 0)
+shape = SubResource("BoxShape3D_7gm67")
+
+[node name="MeshInstance3D" parent="Station_01/IpadKiosk2" index="3"]
+transform = Transform3D(0.10761244, 0, 0, 0, 1.0461358, -0.08625644, 0, 1.0944508, 0.08244861, -0.041850805, 1.0642215, 0.0260365)
+surface_material_override/0 = SubResource("StandardMaterial3D_si31g")
+
+[node name="Station_02" type="Node3D" parent="." index="6"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.811455, 0, 1.5134147)
+
+[node name="Rights_Of_The_Childs" parent="Station_02" index="0" instance=ExtResource("10_khqja")]
+transform = Transform3D(-0.71334827, 0, -0.7008097, 0, 1, 0, 0.7008097, 0, -0.71334827, -2.816927, 0, 1.546385)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_02/Rights_Of_The_Childs" index="0"]
+surface_material_override/1 = SubResource("StandardMaterial3D_mimag")
+
+[node name="CameraPosition" parent="Station_02/Rights_Of_The_Childs" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.046297133, 1.3180459, 1.3408592)
+
+[node name="Inherent_Rights" parent="Station_02" index="1" instance=ExtResource("10_khqja")]
+transform = Transform3D(0.6709704, 0, -0.74148417, 0, 1, 0, 0.74148417, 0, 0.6709704, -2.223917, 0, -1.6770718)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_02/Inherent_Rights" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52453566, 1.6122646, -0.13573265)
+surface_material_override/1 = SubResource("StandardMaterial3D_nkjqd")
+
+[node name="CameraPosition" parent="Station_02/Inherent_Rights" index="1"]
+transform = Transform3D(0.9999976, 0, 0.0020420551, 0, 1, 0, -0.0020420551, 0, 0.9999976, 0.5368805, 1.3180459, 1.0794303)
+
+[node name="Nitsitapii_Children" parent="Station_02" index="2" instance=ExtResource("10_khqja")]
+transform = Transform3D(-0.99794257, 0, -0.06411435, 0, 1, 0, 0.06411435, 0, -0.99794257, 0.624074, 0, 1.175663)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_02/Nitsitapii_Children" index="0"]
+transform = Transform3D(0.81631905, 0, 0.5776012, 0, 1, 0, -0.5776012, 0, 0.81631905, 0.53063965, 1.6122646, 0.04565382)
+surface_material_override/1 = SubResource("StandardMaterial3D_6dp4w")
+
+[node name="CameraPosition" parent="Station_02/Nitsitapii_Children" index="1"]
+transform = Transform3D(0.8194323, 0, 0.5731761, 0, 1, 0, -0.5731761, 0, 0.8194323, 1.0285728, 1.3180459, 0.7129493)
+
+[node name="Kipitaipookaiksi" parent="Station_02" index="3" instance=ExtResource("10_khqja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0368218, 0, -2.3841858e-07)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_02/Kipitaipookaiksi" index="0"]
+transform = Transform3D(0.52367383, 0, -0.85191905, 0, 1, 0, 0.85191905, 0, 0.52367383, 0.43287277, 1.6122646, -1.3682544)
+surface_material_override/1 = SubResource("StandardMaterial3D_jyver")
+
+[node name="CameraPosition" parent="Station_02/Kipitaipookaiksi" index="1"]
+transform = Transform3D(0.49303105, 0, -0.8700117, 0, 1, 0, 0.8700117, 0, 0.49303105, -0.4041958, 1.3180459, -0.86373734)
+
+[node name="Station_03" type="Node3D" parent="." index="7"]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -0.5604034, 0, 3.9307623)
+
+[node name="Disruption" parent="Station_03" index="0" instance=ExtResource("10_khqja")]
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_03/Disruption" index="0"]
+transform = Transform3D(0.782934, 0, 0.62210476, 0, 1, 0, -0.62210476, 0, 0.782934, -5.2416897, 1.6122646, -2.357852)
+surface_material_override/1 = SubResource("StandardMaterial3D_f1ah8")
+
+[node name="CameraPosition" parent="Station_03/Disruption" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.4142876, 1.3180459, -1.5595498)
+
+[node name="Kainaiysinni_Parenting" parent="Station_03" index="1" instance=ExtResource("10_khqja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2508492, 0, 2.3841858e-07)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_03/Kainaiysinni_Parenting" index="0"]
+transform = Transform3D(-0.62707984, 0, -0.77895516, 0, 1, 0, 0.77895516, 0, -0.62707984, 1.4674469, 1.6122646, 0.3468163)
+surface_material_override/1 = SubResource("StandardMaterial3D_meqs4")
+
+[node name="CameraPosition" parent="Station_03/Kainaiysinni_Parenting" index="1"]
+transform = Transform3D(-0.5880817, 0, -0.8088014, 0, 1, 0, 0.8088014, 0, -0.5880817, 0.5655153, 1.3180459, -0.36919618)
+
+[node name="Creation_of_KCS" parent="Station_03" index="2" instance=ExtResource("14_f1ah8")]
+transform = Transform3D(0.65571654, 0, -0.7550074, 0, 1, 0, 0.7550074, 0, 0.65571654, -0.5615512, 0.0121154785, -2.104525)
+
+[node name="CameraPosition" type="Marker3D" parent="Station_03/Creation_of_KCS" index="1"]
+transform = Transform3D(0.9999999, 0, 0, 0, 1, 0, 0, 0, 0.9999999, -0.02933073, 1.348644, 0.9657991)
+
+[node name="Goals_And_Objectives" parent="Station_03" index="3" instance=ExtResource("10_khqja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.72574097, 0, 0)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_03/Goals_And_Objectives" index="0"]
+transform = Transform3D(-0.7368173, 0, -0.6760919, 0, 1, 0, 0.6760919, 0, -0.7368173, 0.1415627, 1.6122646, 0.24221063)
+surface_material_override/1 = SubResource("StandardMaterial3D_5amg4")
+
+[node name="CameraPosition" parent="Station_03/Goals_And_Objectives" index="1"]
+transform = Transform3D(-0.7029853, 0, -0.71120435, 0, 1, 0, 0.71120435, 0, -0.7029853, -0.76743287, 1.3180459, -0.6000228)
+
+[node name="Programs_Provided" parent="Station_03" index="4" instance=ExtResource("10_khqja")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8682795, 0, -2.3841858e-07)
+
+[node name="Creation_Of_KCSC_Banner" parent="Station_03/Programs_Provided" index="0"]
+transform = Transform3D(0.5958465, 0, -0.8030983, 0, 1, 0, 0.8030983, 0, 0.5958465, 0.18993592, 1.6122646, -2.139158)
+surface_material_override/1 = SubResource("StandardMaterial3D_gsvln")
+
+[node name="CameraPosition" parent="Station_03/Programs_Provided" index="1"]
+transform = Transform3D(0.5647509, 0, -0.82526135, 0, 1, 0, 0.82526135, 0, 0.5647509, -0.62787306, 1.3180459, -1.5814397)
+
+[node name="Root_Mesh_Collision" type="Node3D" parent="." index="8"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Root_Mesh_Collision" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Root_Mesh_Collision/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0006713867, -0.028640747, 0.038069252)
+shape = SubResource("BoxShape3D_nn86p")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Root_Mesh_Collision/StaticBody3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.6743073, 1.4434185, -0.17267801)
+shape = SubResource("BoxShape3D_5hpqs")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Root_Mesh_Collision/StaticBody3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.691084, 1.4434185, -0.049957756)
+shape = SubResource("BoxShape3D_5hpqs")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Root_Mesh_Collision/StaticBody3D" index="3"]
+transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 1, 0, -0.99999994, 0, -4.371138e-08, -0.004395716, 1.4434185, -7.4116144)
+shape = SubResource("BoxShape3D_uj218")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Root_Mesh_Collision/StaticBody3D" index="4"]
+transform = Transform3D(-4.371138e-08, 0, 0.9999999, 0, 1, 0, -1, 0, -4.371138e-08, -0.004395716, 1.4434185, 7.410736)
+shape = SubResource("BoxShape3D_uj218")
+
+[node name="Footstep_Decals" type="Node3D" parent="." index="9"]
+
+[node name="Decal" type="Decal" parent="Footstep_Decals" index="0"]
+transform = Transform3D(0.261352, 0, -0.75610524, 0, 0.79999995, 0, 0.75610524, 0, 0.261352, -3.634115, 0.61195564, -5.2694674)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal2" type="Decal" parent="Footstep_Decals" index="1"]
+transform = Transform3D(-0.35073462, 0, -0.71901685, 0, 0.8, 0, 0.71901685, 0, -0.35073462, -3.09461, 0.61195564, -4.403411)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal3" type="Decal" parent="Footstep_Decals" index="2"]
+transform = Transform3D(-0.55457056, 0, -0.5765861, 0, 0.8, 0, 0.5765861, 0, -0.55457056, -2.1097586, 0.61195564, -3.7018766)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal4" type="Decal" parent="Footstep_Decals" index="3"]
+transform = Transform3D(0.56232846, 0, -0.56902236, 0, 0.79999983, 0, 0.56902236, 0, 0.56232846, -1.4784615, 0.61195564, -4.4793234)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal5" type="Decal" parent="Footstep_Decals" index="4"]
+transform = Transform3D(0.56232846, 0, -0.56902236, 0, 0.79999983, 0, 0.56902236, 0, 0.56232846, -0.6821022, 0.61195564, -5.32932)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal6" type="Decal" parent="Footstep_Decals" index="5"]
+transform = Transform3D(-0.63490355, 0, -0.4867211, 0, 0.8000001, 0, 0.4867211, 0, -0.63490355, 0.12907362, 0.61195564, -4.357828)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal7" type="Decal" parent="Footstep_Decals" index="6"]
+transform = Transform3D(-0.63490355, 0, -0.4867211, 0, 0.8000001, 0, 0.4867211, 0, -0.63490355, 0.7578036, 0.61195564, -3.6946027)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal8" type="Decal" parent="Footstep_Decals" index="7"]
+transform = Transform3D(0.65971184, 0, -0.4525264, 0, 0.79999995, 0, 0.4525264, 0, 0.65971184, 1.2209842, 0.61195564, -4.525943)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="Decal9" type="Decal" parent="Footstep_Decals" index="8"]
+transform = Transform3D(0.44874227, 0, -0.6622915, 0, 0.79999995, 0, 0.6622915, 0, 0.44874227, 1.6298909, 0.61195564, -5.3871584)
+size = Vector3(2, 2, 1.5483398)
+texture_albedo = ExtResource("20_nkjqd")
+
+[node name="User" parent="." index="10" node_paths=PackedStringArray("presentation_markers") instance=ExtResource("21_6dp4w")]
+presentation_markers = [NodePath("../Station_01/Cultural_Foundations/CameraPosition"), NodePath("../Station_01/Kainaiysinni/CameraPosition"), NodePath("../Station_01/Miohpokooiksi/CameraPosition"), NodePath("../Station_01/IpadKiosk/CameraPosition"), NodePath("../Station_01/First_man_Woman/CameraPosition"), NodePath("../Station_01/IpadKiosk2/CameraPosition"), NodePath("../Station_02/Rights_Of_The_Childs/CameraPosition"), NodePath("../Station_02/Inherent_Rights/CameraPosition"), NodePath("../Station_02/Nitsitapii_Children/CameraPosition"), NodePath("../Station_02/Kipitaipookaiksi/CameraPosition"), NodePath("../Station_03/Disruption/CameraPosition"), NodePath("../Station_03/Kainaiysinni_Parenting/CameraPosition"), NodePath("../Station_03/Creation_of_KCS/CameraPosition"), NodePath("../Station_03/Goals_And_Objectives/CameraPosition"), NodePath("../Station_03/Programs_Provided/CameraPosition")]
+
+[editable path="JR"]
+[editable path="Station_01/Cultural_Foundations"]
+[editable path="Station_01/Kainaiysinni"]
+[editable path="Station_01/Miohpokooiksi"]
+[editable path="Station_01/First_man_Woman"]
+[editable path="Station_01/IpadKiosk"]
+[editable path="Station_01/IpadKiosk/Model/Ipad_Kiosk_Masaakii"]
+[editable path="Station_01/IpadKiosk/Cameralerp"]
+[editable path="Station_01/IpadKiosk2"]
+[editable path="Station_01/IpadKiosk2/Model/Ipad_Kiosk_Masaakii"]
+[editable path="Station_01/IpadKiosk2/Cameralerp"]
+[editable path="Station_02/Rights_Of_The_Childs"]
+[editable path="Station_02/Inherent_Rights"]
+[editable path="Station_02/Nitsitapii_Children"]
+[editable path="Station_02/Kipitaipookaiksi"]
+[editable path="Station_03/Disruption"]
+[editable path="Station_03/Kainaiysinni_Parenting"]
+[editable path="Station_03/Goals_And_Objectives"]
+[editable path="Station_03/Programs_Provided"]

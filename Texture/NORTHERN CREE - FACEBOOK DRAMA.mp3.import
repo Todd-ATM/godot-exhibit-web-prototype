@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbxvght7rxsm1"
+path="res://.godot/imported/NORTHERN CREE - FACEBOOK DRAMA.mp3-794c56ee786df18f7aced550b42ee68a.mp3str"
+
+[deps]
+
+source_file="res://Texture/NORTHERN CREE - FACEBOOK DRAMA.mp3"
+dest_files=["res://.godot/imported/NORTHERN CREE - FACEBOOK DRAMA.mp3-794c56ee786df18f7aced550b42ee68a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
