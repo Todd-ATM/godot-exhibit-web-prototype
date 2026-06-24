@@ -4,7 +4,7 @@
 
 :root {
     --font-heading: "Bebas Neue", Arial;
-    --font-subtitle1: "Caveat", Helvetica;
+    --font-subtitle1: "Style Script", Helvetica;
 }
 
 html,
@@ -40,7 +40,7 @@ body {
   background-image:
     linear-gradient(
       to bottom,
-      rgba(219, 52, 58, 0.9),
+      rgba(103, 12, 15, 0.9),
       rgba(36, 23, 15, 0.85)
     ),
     url("../images/hero_background.jpg");
@@ -72,18 +72,23 @@ body {
     margin: 0;
     width: 170px;
     height: auto;
+    transform: translateY(-10px)
 }
 
 .hero-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 40px;
+  font-size: 45px;
   letter-spacing: 3px;
+  transform: translatey(10px);
   color: rgba(243, 113, 32, 1)
 }
 
 .hero-subtitle {
     font-family: var(--font-subtitle1);
     font-size: 35px;
+    color: #e2cfb7;
     margin: 0;
+    letter-spacing: 2px;
+    transform: translateY(-15px) skewX(-20deg);
 }
