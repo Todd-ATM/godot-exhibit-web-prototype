@@ -154,3 +154,19 @@ body {
   height: 5px;
   background-color: black;
 }
+
+.content-section {
+  width: 100%;
+  background-color: white;
+  padding: 48px, 24px;
+}
+
+.exhibit-card {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  background-color: #fff8ec;
+  border: 0.5px solid gray;
+  border-radius: 14px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
