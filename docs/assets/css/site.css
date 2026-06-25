@@ -5,6 +5,7 @@
 :root {
     --font-heading: "Bebas Neue", Arial;
     --font-subtitle1: "Style Script", Helvetica;
+    --font-subtitle2: "Montserrat", sans-serif;
 }
 
 html,
@@ -169,4 +170,17 @@ body {
   border: 0.5px solid gray;
   border-radius: 14px;
   box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.card-header {
+  margin-left: 4rem;
+  font-family: var(--font-heading);
+  color: rgba(243, 113, 32, 1);
+}
+
+.card-subtitle1 {
+  margin-left: 4rem;
+  margin-top: -0.5rem;
+  font-family: var(--font-subtitle2);
+  font-weight: 300;
 }
