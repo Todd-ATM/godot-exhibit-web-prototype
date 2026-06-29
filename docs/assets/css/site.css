@@ -326,3 +326,30 @@ body {
   color: white;
   font-size: 0.8rem;
 }
+
+.footer-link-groups a {
+  text-decoration: none;
+  font-family: var(--font-subtitle2);
+  font-size: 0.8rem;
+  color: white;
+  display: block;
+  margin: 0.35rem 0rem;
+
+  transition: color 0.2s ease;
+}
+
+.footer-link-groups a:hover {
+  color: rgba(243, 113, 32, 1);
+}
+
+.footer-pattern {
+  height: 28px;
+  background-image: url("../icons/People-Symbol.svg");
+  background-repeat: -x;
+  background-position: center;
+}
+
+.bottom-footer-pattern {
+  height: 20px;
+  background-image: url("../icons/Bottom-Banner.svg");
+}
