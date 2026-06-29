@@ -262,3 +262,67 @@ body {
   height: 100%;
   object-fit: contain;
 }
+
+.site-footer {
+  width: 100%;
+  background-color: black;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+}
+
+.footer-inner {
+  width: 100%;
+  max-width: 1700px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.footer-primary {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  flex-shrink: 0;
+}
+
+.footer-logo {
+  width: 200px;
+  height: auto;
+
+  margin: 0;
+}
+
+.footer-link-groups {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-left: 7.5rem;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  max-width: 220px;
+}
+
+.footer-column h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-heading);
+  color: rgba(243, 113, 32, 1);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.footer-column p {
+  margin: 0.35rem 0;
+  font-family: var(--font-subtitle2);
+  color: white;
+  font-size: 0.8rem;
+}
